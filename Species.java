@@ -3,8 +3,6 @@ public class Species
     // Attributes ("State") of all Species objects
     String name;
     int age;
-    int heightInInches;
-    double weight;
     
     
     // Classes contain "instructions" on how Objects can be Created.
@@ -12,20 +10,11 @@ public class Species
     // In Java - this method is called a "Constructor" method
     // Which creates a unique "instance" (example) of the Species Class
     
-    // This constructor method is the default constructor method - technically
-    // it does not need to be defined.  This method would be available by default
-    // even without instruction
-    public Species()
-    {
-        
-    }
     
-    public Species (String name, int age, int heightInInches, double weight)
+    public Species (String name, int age)
     {
         this.name = name;
         this.age = age;
-        this.heightInInches = heightInInches;
-        this.weight = weight;
     }
     
     
@@ -33,33 +22,51 @@ public class Species
     //These "instructions" are called "methods".
     // The methods ("Behaviors" or "actions") of the class will go here
     
+    public String getName()
+    {
+        return name;
+    }
+    
+    public int getAge()
+    {
+        return age;
+    }
+    
+    
     // To Speak is a "behavior" of the Species class - yes the animals can talk.  This is Disney!
     public void speak()
     {
         System.out.println("Hi, my name is " + name + ".");
         System.out.println("I am " + age + " years old.");
-        System.out.println("I am " + heightInInches + " inches tall.");
     }
     
     
-    // To Eat is another "Behavior" of the Giraffe class
+    // To Eat is another "Behavior" of the Species class
     public void eat()
     {
         System.out.println(name + " is eating ...");
     }
     
     
-    // To Walk is another "Behavior" of the Giraffe class
+    // To Walk is another "Behavior" of the Species class
     public void walk()
     {
         System.out.println(name + " is walking ...");
     }
     
     
-    // To Sleep is another "Behavior" of the Giraffe class
+    // To Sleep is another "Behavior" of the Species class
     public void sleep()
     {
         System.out.println(name + " is sleeping ...");
+    }
+    
+    
+    
+    // The toString() method is found in the global "Object" class
+    public String toString()
+    {
+        return "Name: " + name + "\nAge: " + age;
     }
  
     // Since this class does not have a main method,
