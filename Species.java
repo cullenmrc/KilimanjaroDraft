@@ -3,6 +3,7 @@ public class Species
     // Attributes ("State") of all Species objects
     String name;
     int age;
+    boolean endangered;
     
     
     // Classes contain "instructions" on how Objects can be Created.
@@ -11,10 +12,11 @@ public class Species
     // Which creates a unique "instance" (example) of the Species Class
     
     
-    public Species (String name, int age)
+    public Species (String name, int age, boolean endangered)
     {
         this.name = name;
         this.age = age;
+        this.endangered = endangered;
     }
     
     
@@ -30,6 +32,11 @@ public class Species
     public int getAge()
     {
         return age;
+    }
+    
+    public boolean isEndangered()
+    {
+        return endangered;
     }
     
     

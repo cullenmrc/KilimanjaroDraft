@@ -18,7 +18,7 @@ public class Giraffe extends Species
      */
     public Giraffe(String name, int age, int heightInInches, double weight)
     {
-        super(name, age);  // Passes to Superclass Species
+        super(name, age, true);  // Passes to Superclass Species
         this.heightInInches = heightInInches;   // Stored in Giraffe object
         this.weight = weight;   // Stored in Giraffe object
     }

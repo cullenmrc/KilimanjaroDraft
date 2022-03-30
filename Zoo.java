@@ -4,7 +4,7 @@ public class Zoo
     // Code is executed sequentially - line by line - within the Main method
     public static void main(String args[])
     {
-        Species mySpecies = new Species("Mickey", 93);
+        Species mySpecies = new Species("Mickey", 93, false);
         Giraffe motherGiraffe = new Giraffe("Kenya", 11, 160, 2500);
         
         /**
@@ -12,8 +12,10 @@ public class Zoo
          * Species class and the Giraffe class.
          */
          
-        System.out.println("Giraffe's Name: " + motherGiraffe.getName());
-        System.out.println("Giraffe's Height: " + motherGiraffe.getHeightInInches());
+        System.out.println(motherGiraffe);
+        System.out.println("Giraffe's height: " + motherGiraffe.getHeightInInches() + " inches");
+        System.out.println("Giraffe's weight: " + motherGiraffe.getWeight() + " pounds");
+        System.out.println("Is endangered?: " + motherGiraffe.isEndangered());
         
         /**
          * With the person, we only have access to methods from 
